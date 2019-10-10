@@ -1,50 +1,49 @@
 function cariModus(arr) {
-    // you can only write your code here!
-    // arr.sort(function(a, b) {
-    //     return a - b
-    // })
-    // var banding = []
-    // var result = []
 
-    // for(let f = 0; f < arr.length; f++){
-    //     banding.push(arr[f])
-    // }
-   
-    // for(let i = 0; i < banding.length; i++){
-    //     for(let j = banding.length - 1; j > i; j--){
-    //         if(banding[i] == banding[j]){
-    //             banding.splice(j, 1)  
-    //         }
-    //     }
-
-    // }
-
-    // for(let k = 0; k < banding.length; k++){
-    //     var hitung = 0
-    //     for(let l = 0; l < arr.length; l++){
-    //         if(banding[k] == arr[l]){
-    //             hitung += 1
-    //         }
-    //     }
-    //     result.push(hitung)
-    // }
-    
-    // for(let m = 0; m < result.length; m++){
-    //     if(result[m] > nilai) {
-    //         nilai = result[m]
-    //     }
-    // }
-    // console.log(banding)
-    // // console.log(result)
     var uniqNumber = []
+    var nilai = []
+    var index = 0
 
     for(let i = 0; i < arr.length; i++) {
         if(uniqNumber.indexOf(arr[i]) == -1){
             uniqNumber.push(arr[i])
         }
     }
+    uniqNumber.sort()
     
-    return uniqNumber
+    for(let j = 0; j < uniqNumber.length; j++){
+      var tampung = 0
+      for(let k = 0; k < arr.length; k++){
+        if(arr[k] === uniqNumber[j]){
+          tampung += 1
+        }
+      }
+      nilai.push(tampung)
+    }
+    var status = false
+    for(let y = 0; y < nilai.length; y++){
+      if(index === 0){
+        index = nilai[0]
+      }
+      if(index === nilai[y]){
+        status = true
+      } else if(index !== nilai[y]) {
+        status = false
+        break
+      }
+    }
+    
+    if(nilai.length === 1 || status ===true){
+      return -1
+    } else {
+     
+      for(let x = 0; x < nilai.length; x++){
+        if(index < nilai[x]){
+          index = x
+        }
+      }
+      return uniqNumber[index]
+    }
 
   }
   
