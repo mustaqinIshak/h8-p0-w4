@@ -1,7 +1,10 @@
 function naikAngkot(arrPenumpang) {
-    rute = ['A', 'B', 'C', 'D', 'E', 'F'];
+    var rute = ['A', 'B', 'C', 'D', 'E', 'F'];
     //your code here
     var result = []
+    if(arrPenumpang.length === 0){
+      return []
+    }
     
     for (let i = 0; i < arrPenumpang.length; i++){
         var mulai = rute.indexOf(arrPenumpang[i][1]) 
