@@ -1,10 +1,3 @@
-// var Christ_Evans =
-//   { firstName: 'Christ',
-//     lastName: 'Evans',
-//     gender: 'Male',
-//     age: 37 }
-// console.log(Christ_Evans)
-
 function changeMe(arr) {
     // you can only write your code here!
     function ageValue(number) {
