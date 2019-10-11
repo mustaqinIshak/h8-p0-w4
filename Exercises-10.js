@@ -16,7 +16,7 @@ function changeMe(arr) {
             age : ageValue(arr[i][3])
         }
 
-        console.log("1. " + arr[i][0] + " " + arr[i][1])
+        console.log((i + 1) + ". " + arr[i][0] + " " + arr[i][1])
         console.log(object)
     }   
   }
