@@ -11,8 +11,10 @@ function angkaPrima(angka) {
             }
             return true
         }
+    } else {
+        return "angka harus lebih dari 1"
     }
-  }
+}
   
   // TEST CASES
   console.log(angkaPrima(3)); // true
