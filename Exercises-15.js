@@ -57,12 +57,7 @@ console.log(highestScore([
 //   foxes: { name: 'Dimitri', score: 90 },
 //   wolves: { name: 'Alexei', score: 85 }
 // }
-/**
- * {
- *      foxes: {},
- *      wolves: {}
- * }
- */
+
 
 
 console.log(highestScore([
