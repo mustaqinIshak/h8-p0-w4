@@ -1,7 +1,5 @@
 function tukarBesarKecil(kalimat) {
     // you can only write your code here!
-   var upperCase = /[A-Z]/g
-  //  var lowerCase = /a-z/g
    var result = []
    
    for(let i = 0; i < kalimat.length; i++){
